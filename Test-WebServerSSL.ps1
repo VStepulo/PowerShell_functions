@@ -3,6 +3,7 @@ function Test-WebServerSSL {
         [Parameter(Mandatory = $true, ValueFromPipeline = $true, Position = 0)]
         [string]$URL
 	)
+	
 	[Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}
 	$req = [Net.HttpWebRequest]::Create($URL)
 	$req.AllowAutoRedirect = $false
