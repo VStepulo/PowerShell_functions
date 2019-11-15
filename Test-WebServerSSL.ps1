@@ -1,6 +1,6 @@
 function Test-WebServerSSL {
     param(
-        [Parameter(Mandatory = $true, ValueFromPipeline = $true, Position = 0)]
+        [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
         [string]$URL
 	)
 	
